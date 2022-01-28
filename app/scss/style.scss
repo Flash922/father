@@ -2,26 +2,79 @@
 @import 'vars';
 @import 'global';
 
-
 /* --------------------------------- header --------------------------------- */
-.header{
+.header {
   position: sticky;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px 40px;
-  background-color: rgba (
-  );
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 2;
 }
-.logo{
+.logo {
   width: 160px;
   height: 70px;
 }
-.header-links-item, .menu-link{
+.header-links-item,
+.menu-link {
   display: inline-block;
   color: #000;
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-right: 35px;
   }
+}
+/* --------------------------------- Slider --------------------------------- */
+.slider-item-img,
+.slider-item {
+  width: 100%;
+}
+.slider-wrapper {
+  margin-bottom: 50px;
+  & > .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    background-image: url(../img/icon/slider-prev.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px 15px;
+    background-color: rgba(232, 232, 232, 1);
+    border: none;
+    border-radius: 50%;
+  }
+  & > .slick-next {
+    right: -6%;
+  }
+  & > .slick-prev {
+    left: -6%;
+    transform: rotate(180deg);
+  }
+  & > .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    & > li:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+  & button {
+    height: 9px;
+    width: 9px;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #c7c7c7;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+  .slick-active > button {
+      background-color: #000;
+    }
 }
