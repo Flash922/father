@@ -1,0 +1,27 @@
+@import 'fonts';
+@import 'vars';
+@import 'global';
+
+
+/* --------------------------------- header --------------------------------- */
+.header{
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px 40px;
+  background-color: rgba (
+  );
+}
+.logo{
+  width: 160px;
+  height: 70px;
+}
+.header-links-item, .menu-link{
+  display: inline-block;
+  color: #000;
+  &:not(:last-child){
+    margin-right: 35px;
+  }
+}
